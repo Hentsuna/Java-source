@@ -1,7 +1,5 @@
 package builder.A1;
 
-import singleton.A6.SanPham;
-
 import java.util.ArrayList;
 import java.util.List;
 
