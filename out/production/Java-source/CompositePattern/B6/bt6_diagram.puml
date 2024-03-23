@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class BNode
+
+BNode <|-- InterNode
+BNode <|-- Leaft
+InterNode --> "1 " BNode : left
+InterNode --> "1 " BNode : right
+abstract class BNode{
+    int value
+    + {abstract} void addL(BNode node)
+    + {abstract} void addR(BNode node)
+    + {abstract} void removeL(BNode node)
+    + {abstract} void removeR(BNode node)
+    + {abstract} void String travel()
+}
+
+class InterNode{
+    + String travel()
+}
+note left of InterNode::travel
+    Duyệt cây theo thứ NLR
+    - Đưa value của note vào stringBuilder
+    - Kiểm tra left != null :
+        Đưa chuỗi của left vào stringBuilder
+    - Kiểm tra right != null :
+            Đưa chuỗi của right vào stringBuilder
+end note
+note right of InterNode
+    compos
+end note
+note right of Leaft
+    composite
+end note
+@enduml
