@@ -1,4 +1,4 @@
-package templace.cafe;
+package template.cafe;
 
 public class MainCafe {
     public static void main(String[] args) {

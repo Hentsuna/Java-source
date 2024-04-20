@@ -1,4 +1,4 @@
-package templace.cafe;
+package template.cafe;
 
 public abstract class CaffeineBeverage {
     StringBuilder builder = new StringBuilder();

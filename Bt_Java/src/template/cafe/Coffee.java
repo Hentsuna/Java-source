@@ -1,4 +1,4 @@
-package templace.cafe;
+package template.cafe;
 
 public class Coffee extends CaffeineBeverage{
 

@@ -1,5 +1,6 @@
 package factory.pizza;
 
+//Factory class
 public abstract class PizzaStore {
     public abstract Pizza createPizza(PizzaType p);
     public Pizza orderPizza(PizzaType p){
