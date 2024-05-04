@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract NhanVienF88{
+    String ten, chucVu
+    int hanMucDuyetVay
+    public {abstract} void duyetKhoanVay(int soTienVay)
+    public {abstract} NhanVienF88 capTren(NhanVienF88 nv)
+}
+
+NhanVienF88 <|-- ChuTich
+NhanVienF88 <|-- NhanVien
+NhanVien --> NhanVienF88 : capTren
+
+note bottom of ChuTich
+    Phương thức duyetKhoanVay:
+        Nếu soTienVay <= hanMucDuyetVay:
+            in: Chủ tịch duyệt mức vay soTienVay
+        Ngược lại:
+            Ra Eximbank vay
+end note
+
+note bottom of NhanVien
+    Phương thức duyetKhoanVay:
+        Nếu soTienVay <= hanMucDuyetVay:
+            in: Chức vụ nhân viên duyệt mức vay soTienVay
+        Ngược lại:
+            Chuyển khoản vay cho capTren duyệt
+end note
+
+@enduml
