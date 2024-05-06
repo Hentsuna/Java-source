@@ -7,6 +7,6 @@ public class Main {
         NhanVienF88 gd = new NhanVien("Chánh", "Giám đốc", 50000000);
         NhanVienF88 ct = new ChuTich("Trọng", "Chủ tịch", 100000000);
         bv.capTren(nv).capTren(gd).capTren(ct);
-        bv.duyetKhoanVay(2000000);
+        bv.duyetKhoanVay(200000000);
     }
 }
