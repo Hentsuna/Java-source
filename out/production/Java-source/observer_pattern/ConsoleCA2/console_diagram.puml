@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Button{
+    +void dangKy(ButtonListener listener)
+    +void huyDangKy(ButtonListener listener)
+    +void Click(Button button)
+}
+class Activity
+interface ButtonListener{
+    +void onClick(Button button)
+}
+ButtonListener <|.. Activity
+ButtonListener <-- Button : listener
+Button <-- Activity : button
+
+@enduml

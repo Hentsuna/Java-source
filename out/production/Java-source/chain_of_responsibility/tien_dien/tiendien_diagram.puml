@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/class-diagram
+abstract BacThang{
+    int gia
+    String mucSuDung
+    int min, max
+    {abstract} int TinhTien(int soTien)
+    {abstract} BacThang ketiep(BacThang bt)
+}
+class Bac1
+class Bac
+BacThang <|-- Bac1
+BacThang <|-- Bac
+Bac --> BacThang : ketiep
+
+@enduml

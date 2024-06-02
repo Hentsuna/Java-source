@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/class-diagram
+class ArrayAggregate{
+    - int[] array
+    + int getItem(int i)
+    + int count()
+}
+interface Iterable
+interface Iterator
+Iterable <|.. ArrayAggregate
+Iterator <|.. ArrayItorator
+ArrayItorator --> ArrayAggregate: array
+
+@enduml
